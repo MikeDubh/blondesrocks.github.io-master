@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blonde's Rocks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo">
+        <p>BLONDE'S ROCKS</p>
+    </div>
+
+    <div class="socials">
+        <ul class="social__menu">
+            <li class="yt">
+                <a href="https://www.youtube.com" target="_blank" rel="noreferrer noopener" class="button">
+                    <img src="/images/icon-youtube.png" alt="Youtube" class="yt">
+                </a>
+            </li>
+            <li class="tw">
+                <a href="https://www.twitter.com" target="_blank" rel="noreferrer noopener" class="button">
+                    <img src="/images/icon-twitter.png" alt="Twitter" class="tw">
+                </a>
+            </li>
+            <li class="ig">
+                <a href="https://www.instagram.com" target="_blank" rel="noreferrer noopener" class="button">
+                    <img src="/images/icon-instagram.png" alt="Instagram" class="ig">
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="calendar">
+        <div class="date">
+        <SCRIPT language="JavaScript">
+
+
+            function startclock1()
+            {
+            var thetime=new Date();
+            
+            var nhours=thetime.getHours();
+            var nmins=thetime.getMinutes();
+            var nsecn=thetime.getSeconds();
+            var nday=thetime.getDay();
+            var nmonth=thetime.getMonth();
+            var ntoday=thetime.getDate();
+            var nyear=thetime.getYear();
+            var AorP=" ";
+            
+            if (nhours>=12)
+                AorP="P.M.";
+            else
+                AorP="A.M.";
+            
+            if (nhours>=13)
+                nhours-=12;
+            
+            if (nhours==0)
+               nhours=12;
+            
+            if (nsecn<10)
+             nsecn="0"+nsecn;
+            
+            if (nmins<10)
+             nmins="0"+nmins;
+            
+            if (nday==0)
+              nday="SUN";
+            if (nday==1)
+              nday="MON";
+            if (nday==2)
+              nday="TUES";
+            if (nday==3)
+              nday="WED";
+            if (nday==4)
+              nday="THU";
+            if (nday==5)
+              nday="FRI";
+            if (nday==6)
+              nday="SAT";
+            
+            if (nmonth==0)
+              nmonth="JAN";
+            if (nmonth==1)
+              nmonth="FEB";
+            if (nmonth==2)
+              nmonth="MAR";
+            if (nmonth==3)
+              nmonth="APR";
+            if (nmonth==4)
+              nmonth="MAY";
+            if (nmonth==5)
+              nmonth="JUN";
+            if (nmonth==6)
+              nmonth="JUL";
+            if (nmonth==7)
+              nmonth="AUG";
+            if (nmonth==8)
+              nmonth="SEPT";
+            if (nmonth==9)
+              nmonth="OCT";
+            if (nmonth==10)
+              nmonth="NOV";
+            if (nmonth==11)
+              nmonth="DEC";
+            
+            if (nyear<=99)
+              nyear= "19"+nyear;
+            
+            if ((nyear>99) && (nyear<2000))
+             nyear+=1900;
+            
+            this.document.getElementById("clockspot1").innerHTML = nday+" "+nmonth+" "+ntoday;
+            
+            setTimeout('startclock1()',1000);
+            
+            } 
+            
+            
+            </SCRIPT>
+            </HEAD>
+            
+            <BODY>
+            
+            <div id="clockspot1"></div>
+            
+            <SCRIPT language="JavaScript">
+            
+            startclock1();
+            
+            </SCRIPT>
+        </div>
+        <div class="time">
+        <SCRIPT language="JavaScript">
+
+
+            function startclock()
+            {
+            var thetime=new Date();
+            
+            var nhours=thetime.getHours();
+            var nmins=thetime.getMinutes();
+            var nsecn=thetime.getSeconds();
+            
+            if (nhours>=12)
+                AorP="PM";
+            else
+                AorP="AM";
+            
+            if (nhours>=13)
+                nhours-=12;
+            
+            if (nhours==0)
+               nhours=12;
+            
+            if (nsecn<10)
+             nsecn="0"+nsecn;
+            
+            if (nmins<10)
+             nmins="0"+nmins;
+            
+            this.document.getElementById("clockspot").innerHTML = nhours+":"+nmins+" "+AorP;
+            
+            setTimeout('startclock()',1000);
+            
+            } 
+            
+            
+            </SCRIPT>
+            </HEAD>
+            
+            <BODY>
+            
+            <div id="clockspot"></div>
+            
+            <SCRIPT language="JavaScript">
+            
+            startclock();
+            
+            </SCRIPT>
+        </div>
+    </div>
+
+    <div class="folder">
+      <div class="folder__back">
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="paper"></div>
+        <div class="folder__front"></div>
+        <div class="folder__front right"></div>
+      </div>
+    </div>
+    
+    <!-- Draggable DIV -->
+    <div id="draggable" style="display:none">
+      <div id="draggable__header">
+        <div class="draggable__title">New Folder 1</div>
+      </div>
+      <div class = "content-wrap">
+        <div class = "content">
+          <div class = "img-list">
+            <ul style="list-style: none;">
+              <li class="btn-d-click " data-val="img-1">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_1</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-2">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_2</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-3">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_3</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-4">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_4</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-5">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_5</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-6">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_6</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-7">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_7</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-8">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_8</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-9">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_9</div></div>
+              </li>
+              <li class="btn-d-click " data-val="img-10">
+                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div class="text">BR_IMG_10</div></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let btn = document.querySelector('.folder');
+      let div = document.querySelector('#draggable');
+
+      btn.addEventListener('click', () =>{
+        if(div.style.display === 'none'){
+          div.style.display = 'block';
+        }
+        else{
+          div.style.display = 'none';
+        }
+      })
+    </script>
+
+    <script>
+    window.onload = addListeners();
+    var x_pos = 0,
+    y_pos = 0;
+
+    function addListeners() {
+      document.getElementById('#draggable__header').addEventListener('mousedown', mouseDown, false);
+      window.addEventListener('mouseup', mouseUp, false);
+    }
+
+    function mouseUp() {
+      window.removeEventListener('mousemove', divMove, true);
+    }
+
+    function mouseDown(e) {
+      var div1 = document.getElementById('#draggable');
+      x_pos = e.clientX - div.offsetLeft;
+      y_pos = e.clientY - div.offsetTop;
+      window.addEventListener('mousemove', divMove, true);
+    }
+
+    function divMove(e) {
+      var div1 = document.getElementById('#draggable');
+      div1.style.position = 'absolute';
+      div1.style.top = (e.clientY - y_pos) + 'px';
+      div1.style.left = (e.clientX - x_pos) + 'px';
+    }
+  </script>
+</body>
+</html>
