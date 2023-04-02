@@ -46,6 +46,9 @@ body{
     position: fixed;
     width: 100vw;
     height: 100vh;
+    background-image: url('https://payload.cargocollective.com/1/16/528101/14404889/nj_clouds_1.gif');
+    background-position: bottom;
+    background-size: cover;
 }
 
 /*---------------------------------------------------*/
@@ -121,7 +124,7 @@ body{
 
 /*---------------------------------------------------*/
 
-.background{
+/*.background{
     display: block;
     position: relative;
     width: 100vw;
@@ -139,7 +142,7 @@ body{
     height: auto;
     z-index: -100;
     transform: translate(-50%, -50%);
-}
+}*/
 
 /*---------------------------------------------------*/
 
@@ -157,7 +160,7 @@ body{
     position: absolute;
     width: 80px;
     height: 56px;
-    background: grey;
+    background: #DBD9DC;
     border-radius: 0px 5px 5px 5px;
     cursor: pointer;
 }
@@ -169,7 +172,7 @@ body{
     content: "";
     width: 30px;
     height: 10px;
-    background: grey;
+    background: #DBD9DC;
     border-radius: 5px 5px 0 0;
 }
 
@@ -201,7 +204,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: grey;
+    background: #DBD9DC;
     border-radius: 5px;
     transform-origin: bottom;
     transition: all 0.3s ease-in-out;
