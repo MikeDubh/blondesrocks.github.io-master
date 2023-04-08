@@ -1,11 +1,11 @@
 @font-face {
     font-family: 'AppleSDGothicNeoR';
-    src: url('AppleSDGothicNeoR.eot');
-    src: url('AppleSDGothicNeoR.eot?#iefix') format('embedded-opentype'),
-        url('AppleSDGothicNeoR.woff2') format('woff2'),
-        url('AppleSDGothicNeoR.woff') format('woff'),
-        url('AppleSDGothicNeoR.ttf') format('truetype'),
-        url('AppleSDGothicNeoR.svg#AppleSDGothicNeoR') format('svg');
+    src: url('/apple/AppleSDGothicNeoR.eot');
+    src: url('/apple/AppleSDGothicNeoR.eot?#iefix') format('embedded-opentype'),
+        url('/apple/AppleSDGothicNeoR.woff2') format('woff2'),
+        url('/apple/AppleSDGothicNeoR.woff') format('woff'),
+        url('/apple/AppleSDGothicNeoR.ttf') format('truetype'),
+        url('/apple/AppleSDGothicNeoR.svg#AppleSDGothicNeoR') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -328,7 +328,7 @@ body{
     overflow-y: auto;
 }
 
-.img-list>ul>li>.img-wrap>.img{
+.img-list>ul>li>#img-wrap>#img{
     display: block;
     width: 72px;
     height: 72px;
@@ -340,7 +340,7 @@ body{
     margin-bottom: 6px;
 }
 
-.myClass
+.img-border
 {
     border-radius: 8px;
     border: 1px solid #D9D9D9;
@@ -361,7 +361,7 @@ body{
     cursor: pointer;
 }
 
-.img-list>ul>li>.img-wrap {
+.img-list>ul>li>#img-wrap {
     display: block;
     position: relative;
     width: 100%;
@@ -369,7 +369,7 @@ body{
     margin-right: auto;
 }
 
-.img-list>ul>li>.img-wrap>.text {
+.img-list>ul>li>#img-wrap>.text {
     display: block;
     position: relative;
     text-align: center;

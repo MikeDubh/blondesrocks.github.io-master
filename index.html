@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <script type="text/javascript" src="app.js"></script>
     <header class="nav__bar">
       <div class="logo">
         <p>BLONDE'S ROCKS</p>
@@ -210,43 +211,43 @@
           <div class = "img-list">
             <ul style="list-style: none;">
               <li class="btn-d-click" data-val="img-1">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_1</div></div>
               </li>
               <li class="btn-d-click" data-val="img-2">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_2</div></div>
               </li>
               <li class="btn-d-click" data-val="img-3">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_3</div></div>
               </li>
               <li class="btn-d-click" data-val="img-4">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_4</div></div>
               </li>
               <li class="btn-d-click" data-val="img-5">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_5</div></div>
               </li>
               <li class="btn-d-click" data-val="img-6">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_6</div></div>
               </li>
               <li class="btn-d-click" data-val="img-7">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_7</div></div>
               </li>
               <li class="btn-d-click" data-val="img-8">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_8</div></div>
               </li>
               <li class="btn-d-click" data-val="img-9">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_9</div></div>
               </li>
               <li class="btn-d-click" data-val="img-10">
-                <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
+                <div id="img-wrap"><div id="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_10</div></div>
               </li>
             </ul>
@@ -300,12 +301,21 @@
 
   <!-- Border Around Pictures-->
   <script>
-    document.querySelector('.img-list>ul>li').addEventListener('click', () => {
-      if(document.querySelector('.img-list>ul>li').classList.contains('myClass')){
-        document.querySelector('.img-list>ul>li>.img-wrap>.img').classList.remove('myClass');
+    document.querySelector(".btn-d-click").addEventListener("click", event => {
+      console.log(event.target.dataset.val);
+    })
+  </script>
+
+  <script>
+    //i = clicked img
+
+    document.querySelectorAll('.img-list>ul>li').addEventListener('click', () => {
+      if(document.querySelectorAll('.img-list>ul>li>div>.img')[i].classList.contains('img-border') == false){
+        document.querySelectorAll('.img-list>ul>li>.img-wrap>.img').classList.remove('img-border');
+        document.querySelectorAll('.img-list>ul>li>.img-wrap>.img')[i].classList.add('img-border');
       }
       else{
-        document.querySelector('.img-list>ul>li>.img-wrap>.img').classList.add('myClass');
+        document.querySelectorAll('.img-list>ul>li>.img-wrap>.img')[i].classList.remove('img-border');
       }
     });
   </script>
