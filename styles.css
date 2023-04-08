@@ -172,7 +172,7 @@ body{
     position: absolute;
     width: 80px;
     height: 56px;
-    background: #B0B0B0;
+    background: #CEB2F3;
     border-radius: 0px 5px 5px 5px;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgb(0 0 0 / 30%);
@@ -186,7 +186,7 @@ body{
     content: "";
     width: 30px;
     height: 10px;
-    background: #B0B0B0;
+    background-image: linear-gradient(#C395F9, #CEB2F3);
     border-radius: 5px 5px 0 0;
 }
 
@@ -221,7 +221,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #B0B0B0;
+    background-image: linear-gradient(#CEB2F3, #C395F9);
     border-radius: 5px;
     transform-origin: bottom;
     transition: all 0.3s ease-in-out;
@@ -322,6 +322,13 @@ body{
     background-repeat: no-repeat;
     background-size: 54px 40px;
     margin-bottom: 6px;
+}
+
+.myClass
+{
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    box-sizing: border-box;
 }
 
 .img-list>ul {

@@ -197,62 +197,64 @@
         </img>
         </div> -->
       </div>
+
       <div id="draggable" style="display:none">
-      <div id="draggable__header">
-        <div class="draggable__title">New Folder 1</div>
-        <div class="btn__close">
-          <img src="/images/btn-folder-close.png" alt="close window">
+        <div id="draggable__header">
+          <div class="draggable__title">New Folder 1</div>
+          <div class="btn__close">
+            <img src="/images/btn-folder-close.png" alt="close window">
         </div>
-      </div>
-      <div class = "content-wrap">
+        </div>
+        <div class = "content-wrap">
         <div class = "content">
           <div class = "img-list">
             <ul style="list-style: none;">
-              <li class="btn-d-click " data-val="img-1">
+              <li class="btn-d-click" data-val="img-1">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_1</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-2">
+              <li class="btn-d-click" data-val="img-2">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_2</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-3">
+              <li class="btn-d-click" data-val="img-3">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_3</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-4">
+              <li class="btn-d-click" data-val="img-4">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_4</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-5">
+              <li class="btn-d-click" data-val="img-5">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_5</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-6">
+              <li class="btn-d-click" data-val="img-6">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_6</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-7">
+              <li class="btn-d-click" data-val="img-7">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_7</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-8">
+              <li class="btn-d-click" data-val="img-8">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_8</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-9">
+              <li class="btn-d-click" data-val="img-9">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_9</div></div>
               </li>
-              <li class="btn-d-click " data-val="img-10">
+              <li class="btn-d-click" data-val="img-10">
                 <div class="img-wrap"><div class="img" style="background-image: url(&quot;/images/icon-img.png&quot;);"></div>
                 <div class="text">BR_IMG_10</div></div>
               </li>
             </ul>
           </div>
         </div>
+        </div>
       </div>
-      </div>
+
       <div class="folder__container">
         <div class="folder">
         <div class="folder__back">
@@ -265,7 +267,6 @@
         </div>
         </div>
       </div>
-
 
   <!-- Open UI From Folder Script-->
     <script>
@@ -281,6 +282,33 @@
         }
       })
     </script>
+
+  <!-- Close UI From X Script-->
+  <script>
+    let btnX = document.querySelector('.btn__close');
+    let divX = document.querySelector('#draggable');
+
+    btnX.addEventListener('click', () =>{
+      if(divX.style.display === 'none'){
+        divX.style.display = 'block';
+      }
+      else{
+        divX.style.display = 'none';
+      }
+    })
+  </script>
+
+  <!-- Border Around Pictures-->
+  <script>
+    document.querySelector('.img-list>ul>li').addEventListener('click', () => {
+      if(document.querySelector('.img-list>ul>li').classList.contains('myClass')){
+        document.querySelector('.img-list>ul>li>.img-wrap>.img').classList.remove('myClass');
+      }
+      else{
+        document.querySelector('.img-list>ul>li>.img-wrap>.img').classList.add('myClass');
+      }
+    });
+  </script>
 
 <!-- Draggable Script -->
     <script>
